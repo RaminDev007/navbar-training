@@ -1,0 +1,51 @@
+.navbar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--darkgray);
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-item {
+  padding: 1rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-menu {
+    position: absolute;
+    flex-direction: column;
+    background-color: tomato;
+    top: 100px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    transition: 0.5s;
+    left: -100%;
+  }
+  .nav-item {
+    font-size: 1rem;
+    margin: 1rem;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+}
